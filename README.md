@@ -13,5 +13,6 @@ https://render2web.com/php/agregar-php-a-las-variables-de-entorno-de-windows/ (s
 
 3) descargar composer, puede que ya lo tenga instalado. Para asergurarnos hay que ejecutar el comando. "composer --version" en la terminal, en caso que no devuelva nada hay que descargarlo del siguiente link https://getcomposer.org/download/
 
+4) Ejecutar composer install. De esta manera nos instalará la versión de laravel (10.27.0)
 
    
