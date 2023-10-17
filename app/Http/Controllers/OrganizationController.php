@@ -33,7 +33,7 @@ class OrganizationController extends Controller
     public function create()
     {
         //
-        dd('soy el create');
+        return view('organizations.create');
     }
 
     /**
@@ -41,7 +41,9 @@ class OrganizationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $organization = new Organization($request->All());
+        $organization->save();
+        return redirect()->route('organization.index');
     }
 
     /**
@@ -58,6 +60,10 @@ class OrganizationController extends Controller
     public function edit(string $id)
     {
         //
+        //dd('¿que es el $id que llega?' .$id);
+        $organization = Organization::find($id);
+
+        return view('organizations.edit', compact('organization'));
     }
 
     /**
@@ -66,6 +72,10 @@ class OrganizationController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $organization = Organization::find($id);
+        $organization->fill($request->all());
+        $organization->save();
+        return redirect()->route('organization.index');
     }
 
     /**

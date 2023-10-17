@@ -16,6 +16,8 @@
         </style>
     </head>
     <body class="antialiased">
+
+    Aca hay un body y es el inicio del proyecto, no olvidar
         
     </body>
 </html>
