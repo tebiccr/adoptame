@@ -84,5 +84,8 @@ class OrganizationController extends Controller
     public function destroy(string $id)
     {
         //
+        $organization = Organization::find($id);
+        $organization->delete();
+        return redirect()->route('organization.index');
     }
 }
