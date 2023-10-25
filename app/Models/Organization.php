@@ -13,4 +13,21 @@ class Organization extends Model
         'name',
         'address',
     ];
+
+
+    public function commune()
+    {
+        return $this->belongsTo(Commune::class);
+    }
+
+
+
+
+
+    public function pets()
+    {
+        return $this->hasMany(Pet::class);
+    }
+
+
 }
